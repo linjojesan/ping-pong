@@ -1,0 +1,31 @@
+.jumbotron {
+  text-align: center:
+   margin-bottom: 0px;
+   background-image: url(http://www.mediacircus.net/pingpong___________112.jpg);
+   background-position: 0%50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: red;
+   text-shadow: black 0.3em 0.3em 0.3em;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 h2 {
+  margin-top: 30px;
+}
+
+
+
+li {
+  font-size: 20px;
+  margin-top:20px;
+}
+
+#formmodel {
+  width: 300px;
+  margin-top: 30px;
+}
