@@ -11,7 +11,7 @@
   <div class="container">
     <div class="jumbotron">
       <div class="container text-center">
-      <h1 id="blinky">Ping Pong!</h1>
+        <h1 id="blinky">Ping Pong!</h1>
       </div>
     </div
     <br><br>
@@ -25,21 +25,21 @@
       <li> Numbers divisible by 5 become "pong"</li>
       <li> Numbers divisible by 3 and 5 become "pingpong"
     </ol>
-    <div class="well" id="formmodel">
-      <form>
-        <div class="form-group">
-          <label for="formmodel">Enter any number other than 0</label>
-          <input type="number" class="form-control" id="enter">
-        </div>
+    <form id="input">
+      <div class="well">
+
+    <div class="form-group">
+      <label for="yournumber">Enter any number other than 0</label>          <input id="yournumber" class="form-control" type="text">
     </div>
-    <button type="submit" class="btn btn-primary btn-lg">Let's Play!</button>
+      </div>
+    <button type="submit" class="btn btn-primary btn-lg" id="go">Let's Play!</button>
+    <div class="results">
+      <p><span id="warning"></span></p>
+        <ul class="numbers">
+        </ul>
+    </div>
 
-      </form>
-
-    <ul id="outcome">
-    </ul>
-
-
+    </form>
 
 
 
