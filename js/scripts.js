@@ -1,6 +1,5 @@
+
 var numberFun = [];
-
-
 
 function pingPong(userNumber) {
   for ( var i = 1; i <= userNumber; i += 1 ) {
@@ -36,7 +35,26 @@ $(document).ready(function() {
 });
 //
 
+<<<<<<< HEAD
 
+=======
+//user interface logic
+$(function() {
+    $("form#input").submit(function(event) {
+        event.preventDefault();
+    var input = parseInt($("#yournumber").val());
+
+    var game = pong(input);
+    games.forEach(function(game) {
+      $("#result").text(games);
+    });
+
+  });
+});
+
+
+
+>>>>>>> first commit
     // console.log(count);
 
 
