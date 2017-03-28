@@ -1,19 +1,26 @@
 //business logic
-var pong = function(count) {
-  var numberRange = [];
-  for (var n = 1; n <= count; number++) {
-    if (n % 3 === 0) {
-      numberRange.push("Ping");
-    } else if ( n % 5 === 0 ) {
-      numberRange.push("Pong")
-    }  else if (n % 15 === 0) {
-      numberRange.push("Ping Pong")
+var pong = function(input)  {
+  var numberIndex = [];
+  var index = 0;
+
+  for (var index = 0; index <= 3000; index++) {
+    if (index % 3 === 0) {
+      $("#result").text("Ping");
+    } else if ( index % 5 === 0 ) {
+      $("#result").text("Pong");
+    }  else if (index % 15 === 0) {
+      $("#result").text("Ping Pong")
     }
       else {
-      numberRange.push(n);
+      $("#result").text(index);
     };
   };
-    return numberRange;
+  return numberIndex;
+};
+
+
+    // return numberRange;
+
 
 
 
@@ -23,15 +30,24 @@ var pong = function(count) {
 
 
 //user interface logic
-$(document).ready(function() {
+$(function() {
+    $("form#input").submit(function(event) {
+        event.preventDefault();
+    var input = parseInt($("#yournumber").val());
 
-  $("form").submit(function(event) {
+    var game = pong(input);
+    games.forEach(function(game) {
+      $("#result").text(games);
+    });
 
-    var count =parseInt($("#enter").val());
-    console.log();
+  });
+});
 
-  };
-};
+
+
+    // console.log(count);
+
+
 // $(function blink() {
 //   $('#blinky').fadeOut(500).fadeIn(500, blink);
 // })();
