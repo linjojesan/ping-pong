@@ -1,48 +1,49 @@
-//business logic
-var pong = function(input)  {
-  var numberIndex = [];
-  var index = 0;
+var numberFun = [];
 
-  for (var index = 0; index <= 3000; index++) {
-    if (index % 3 === 0) {
-      $("#result").text("Ping");
-    } else if ( index % 5 === 0 ) {
-      $("#result").text("Pong");
-    }  else if (index % 15 === 0) {
-      $("#result").text("Ping Pong")
-    }
-      else {
-      $("#result").text(index);
-    };
-  };
-  return numberIndex;
+var ping = function(number) {
+  if (number % 3 === 0 && number !== 0) {
+    return true;
+  }
 };
 
+var pong = function(number) {
+  if (number % 5 === 0 && number !== 0) {
+    return true;
+  }
+};
 
-    // return numberRange;
+function pingPong(userNumber) {
+  for ( var i = 1; i <= userNumber; i += 1 ) {
+    if (ping(i) && pong(i)) {
+      numberFun.push("pingpong");
+    } else if (ping(i)) {
+      numberFun.push("ping");
+    } else if (pong(i)) {
+      numberFun.push("pong");
+    } else
+      numberFun.push(i);
+  }
+}
 
 
+// User Interface Logic
+$(document).ready(function() {
+  $("form#input").submit(function(event) {
+    event.preventDefault();
+    var userNumber = $("input#yournumber").val();
 
+    if (userNumber <= 0) {
+      $("#warning").html("<p>Please Enter a Number Above 1. Thank you!</p>");
+    } else {
+      pingPong(userNumber);
+    }
 
-
-
-
-
-
-//user interface logic
-$(function() {
-    $("form#input").submit(function(event) {
-        event.preventDefault();
-    var input = parseInt($("#yournumber").val());
-
-    var game = pong(input);
-    games.forEach(function(game) {
-      $("#result").text(games);
+    numberFun.forEach(function(number) {
+      $(".numbers").append("<li>" + number + "</li>");
     });
-
   });
 });
-
+//
 
 
     // console.log(count);
