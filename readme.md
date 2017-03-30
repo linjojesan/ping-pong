@@ -13,7 +13,7 @@ The user enters a number and Ping Pong outputs numbers up to that number as a se
 Access Ping-pong at [PingPong](https://linjojesan.github.io/ping-pong/)
 
 ```
-http://github.com/LawlietBlack/ping-pong
+
 ```
 
 ## License
