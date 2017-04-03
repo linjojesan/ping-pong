@@ -1,27 +1,18 @@
 var numberFun = [];
 
-var ping = function(number) {
-  if (number % 3 === 0 && number !== 0) {
-    return true;
-  }
-};
 
-var pong = function(number) {
-  if (number % 5 === 0 && number !== 0) {
-    return true;
-  }
-};
 
 function pingPong(userNumber) {
   for ( var i = 1; i <= userNumber; i += 1 ) {
-    if (ping(i) && pong(i)) {
+    if ((i) % 15 === 0 && (i) !== 0) {
       numberFun.push("pingpong");
-    } else if (ping(i)) {
+    } else if ((i) % 3 === 0 && (i) !== 0){
       numberFun.push("ping");
-    } else if (pong(i)) {
+    } else if ((i) % 5 === 0 && (i) !== 0) {
       numberFun.push("pong");
-    } else
+    } else {
       numberFun.push(i);
+    }
   }
 }
 
