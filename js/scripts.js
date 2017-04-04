@@ -1,7 +1,5 @@
 var numberFun = [];
 
-
-
 function pingPong(userNumber) {
   for ( var i = 1; i <= userNumber; i += 1 ) {
     if ((i) % 15 === 0 && (i) !== 0) {
@@ -24,12 +22,11 @@ $(document).ready(function() {
     var userNumber = $("input#yournumber").val();
 
     if (userNumber <= 0) {
-      $("#warning").html("<p>Please Enter a Number Above 1. Thank you!</p>");
+      $("#warning").html("<p>Please make your sure your number is not 1 or 0.</p>");
     } else {
       pingPong(userNumber);
     }
-
-    numberFun.forEach(function(number) {
+      numberFun.forEach(function(number) {
       $(".numbers").append("<li>" + number + "</li>");
     });
   });
@@ -37,7 +34,7 @@ $(document).ready(function() {
 //
 
 
-    // console.log(count);
+    
 
 
 // $(function blink() {
